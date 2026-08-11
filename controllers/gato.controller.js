@@ -1,5 +1,5 @@
 // Controlador de gatos
-import db from "../firebase";
+import db from "../firebase.js";
 
 export const registrarGato = async (req, res) => {
   try {
