@@ -16,4 +16,4 @@ app.use((req, res) => {
   res.status(404).json({ mensaje: "Ruta no registrada." });
 });
 
-export default app;
+export default app; 
