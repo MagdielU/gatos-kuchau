@@ -1,5 +1,5 @@
-import db from "../firebase.js";
-import supabase from "../supabase.js";
+import db from "../firebase.js"; 
+import supabase from "../supabase.js"; 
 
 export const registrarGato = async (req, res) => {
   try {
