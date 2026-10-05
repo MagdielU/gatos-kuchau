@@ -4,7 +4,8 @@ import {
   registrarGato, 
   obtenerGatos, 
   actualizarGato,
-  eliminarGato
+  eliminarGato,
+  buscarGatos
 } from "../controllers/gato.controller.js";
 
 const router = express.Router();
@@ -27,4 +28,7 @@ router.put("/gato/:id", upload.single("imagen"), actualizarGato);
 
 // Ruta para eliminar gato por ID
 router.delete("/gato/:id", eliminarGato);
+
+router.get("/gatos/buscar", buscarGatos);   
+
 export default router;
