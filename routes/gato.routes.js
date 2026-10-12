@@ -7,8 +7,11 @@ import {
   eliminarGato,
   buscarGatos
 } from "../controllers/gato.controller.js";
+import { capturarInfoSolicitud } from "../middlewares/auditoria.js";
 
 const router = express.Router();
+
+router.use(capturarInfoSolicitud);   
 
 const upload = multer({
   storage: multer.memoryStorage(),
@@ -30,5 +33,6 @@ router.put("/gato/:id", upload.single("imagen"), actualizarGato);
 router.delete("/gato/:id", eliminarGato);
 
 router.get("/gatos/buscar", buscarGatos);   
+
 
 export default router;
