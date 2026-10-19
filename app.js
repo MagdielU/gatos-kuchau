@@ -41,7 +41,7 @@ const limiterGatos = rateLimit({
 // Aplicar el limitador ANTES de las rutas de gatos
 app.use("/gato", limiterGatos);
 app.use("/gatos", limiterGatos);
-app.use("estadisticas",estadisticasRoutes); 
+app.use(estadisticasRoutes); 
 
 // Rutas
 app.use(gatoRoutes);
