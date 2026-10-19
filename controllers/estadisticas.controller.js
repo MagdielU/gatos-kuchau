@@ -1,3 +1,5 @@
+import db from "../firebase.js";
+
 export const calcularEstadisticas = async () => {
   const snapshot = await db.collection("gatos").orderBy("fecha", "desc").get();
 
