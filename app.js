@@ -41,7 +41,7 @@ const limiterGatos = rateLimit({
 // Aplicar el limitador ANTES de las rutas de gatos
 app.use("/gato", limiterGatos);
 app.use("/gatos", limiterGatos);
-
+app.use("estadisticas",estadisticasRoutes); 
 
 // Rutas
 app.use(gatoRoutes);
@@ -50,6 +50,5 @@ app.use(climaRoutes);
 app.use((req, res) => {
   res.status(404).json({ mensaje: "Ruta no registrada." });
 });
-
-app.use(estadisticasRoutes);   // agrega esta línea junto a las otras rutas
+  // agrega esta línea junto a las otras rutas
 export default app; 
