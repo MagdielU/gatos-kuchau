@@ -445,7 +445,7 @@ export const exportarGatosCSV = async (req, res) => {
     // Encabezados del CSV
     const encabezados = ["ID", "Nombre", "Edad", "Peso (kg)", "Raza", "URL Imagen", "Fecha de registro"];
 
-    const lineas = [encabezados.join(",")];
+    const lineas = [encabezados.join(";")];
 
     // Filas de datos
     gatos.forEach((gato) => {
@@ -463,7 +463,7 @@ export const exportarGatosCSV = async (req, res) => {
         escapar(fecha),
       ];
 
-      lineas.push(fila.join(","));
+      lineas.push(fila.join(";"));
     });
 
     const csvContent = lineas.join("\n");
