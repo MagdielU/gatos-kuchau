@@ -2,7 +2,6 @@
 import ExcelJS from "exceljs";
 import { calcularEstadisticas } from "./estadisticas.controller.js";
 
-
 export const exportarEstadisticasExcel = async (req, res) => {
   try {
     const stats = await calcularEstadisticas();
